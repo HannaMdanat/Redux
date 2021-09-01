@@ -1,0 +1,39 @@
+.btn {
+    height: 60px;
+    width: 160px;
+    margin: 1%;
+    cursor: pointer;
+    border-radius: 50%;
+    border:2px solid black;
+    background-color: white;
+}
+
+.btn-wrapper {
+    width: 100%;
+    flex-direction: row;
+}
+
+.card-wrapper {
+    width: 60%;
+    height: auto;
+    border: 1px solid black;
+    background-color: white;
+  }
+
+.filter-wrapper {
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.filter-card {
+    margin: 15px 0;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid black;
+}
+
+.container {
+    width: 60%;
+}

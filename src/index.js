@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import App from './App';
+import listReducer from './redux/reducers/listReducer'
+import filterReducer from './redux/reducers/filterReducer'
 import reportWebVitals from './reportWebVitals';
+import { combineReducers } from 'redux';
+
+const rootReducer = combineReducers({
+  list: listReducer,
+  filter: filterReducer,
+});
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
